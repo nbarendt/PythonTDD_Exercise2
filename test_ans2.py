@@ -18,7 +18,14 @@ import unittest
 class WC(object):
     def __init__(self, input):
         pass
+
     def getLineCount(self):
+        return 0
+
+    def getCharacterCount(self):
+        return 0
+
+    def getWordCount(self):
         return 0
 
 class Test_EmptyString(unittest.TestCase):
@@ -27,4 +34,11 @@ class Test_EmptyString(unittest.TestCase):
 
     def test_EmptyStringHasZeroLines(self):
         self.assertEqual(0, self.wordCounter.getLineCount())
+
+    def test_EmptyStringHasZeroCharacters(self):
+        self.assertEqual(0, self.wordCounter.getCharacterCount())
+    
+    def test_EmptyStringHasZeroWords(self):
+        self.assertEqual(0, self.wordCounter.getWordCount())
+    
 
