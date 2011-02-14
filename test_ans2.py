@@ -22,5 +22,9 @@ class WC(object):
         return 0
 
 class Test_EmptyString(unittest.TestCase):
+    def setUp(self):
+        self.wordCounter = WC('')
+
     def test_EmptyStringHasZeroLines(self):
-        self.assertEqual(0, WC('').getLineCount())
+        self.assertEqual(0, self.wordCounter.getLineCount())
+
