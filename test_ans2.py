@@ -17,16 +17,16 @@ import unittest
 
 class WC(object):
     def __init__(self, input):
-        pass
+        self.input = input
 
     def getLineCount(self):
         return 0
 
     def getCharacterCount(self):
-        return 0
+        return len(self.input)
 
     def getWordCount(self):
-        return 0
+        return len(self.input.split())
 
 class Test_EmptyString(unittest.TestCase):
     def setUp(self):
@@ -45,5 +45,12 @@ class Test_SingleCharacterString(unittest.TestCase):
     def setUp(self):
         self.wordCounter = WC('a')
         
+    def test_0Lines(self):
+        self.assertEqual(0, self.wordCounter.getLineCount())
     
-
+    def test_1Character(self):
+        self.assertEqual(1, self.wordCounter.getCharacterCount())
+    
+    def test_1Word(self):
+        self.assertEqual(1, self.wordCounter.getWordCount())
+     
