@@ -32,13 +32,18 @@ class Test_EmptyString(unittest.TestCase):
     def setUp(self):
         self.wordCounter = WC('')
 
-    def test_EmptyStringHasZeroLines(self):
+    def test_ZeroLines(self):
         self.assertEqual(0, self.wordCounter.getLineCount())
 
-    def test_EmptyStringHasZeroCharacters(self):
+    def test_ZeroCharacters(self):
         self.assertEqual(0, self.wordCounter.getCharacterCount())
     
-    def test_EmptyStringHasZeroWords(self):
+    def test_ZeroWords(self):
         self.assertEqual(0, self.wordCounter.getWordCount())
+
+class Test_SingleCharacterString(unittest.TestCase):
+    def setUp(self):
+        self.wordCounter = WC('a')
+        
     
 
