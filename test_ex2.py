@@ -15,4 +15,12 @@ import unittest
 #  Note: feel free to leave both your class and your test cases
 #  in the same file.
 
+# the lists to tests should include:
+#  empty string ''
+#  single character string 'a'
+#  two word string 'a b'
+#  short line 'a\n'
+#  multiple lines 'hello world!\ngoodbye world!\n'
+
+
 
